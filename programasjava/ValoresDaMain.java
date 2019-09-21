@@ -1,3 +1,4 @@
+package programasjava;
 /**
  *  @author Renan Ponick
  * 
@@ -9,19 +10,19 @@ public class ValoresDaMain{
         int i=0;
         try{
             for(String arg : args){
+                System.out.println("\n"+i);
                 vetor[i] = Integer.parseInt(arg);
                 i++;
             }
+            System.out.println("soma "+ (vetor[0]+vetor[1]));
+            System.out.println("subtracao "+(vetor[0]-vetor[1]));
+            System.out.println("multi "+vetor[0]*vetor[1]);
+            try {
+                System.out.println("div "+vetor[0]/vetor[1]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         } catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        
-        System.out.println(vetor[0]+vetor[1]);
-        System.out.println(vetor[0]-vetor[1]);
-        System.out.println(vetor[0]*vetor[1]);
-        try {
-            System.out.println(vetor[0]/vetor[1]);
-        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
