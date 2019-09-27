@@ -20,8 +20,8 @@ public class MediaEncerraNegativo{
             cont++;
         }while(nota>=0);
 
-        if(soma/cont>7){
-            System.out.println("Aprovad. Média:");
+        if(soma/cont>=7){
+            System.out.println("Aprovado. Média:");
             System.out.println(soma/cont);
         }else{
             System.out.println("Reprovado. Média:");
