@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class ParImparVetor{
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int qtde=2, i;
+        int qtde=5, i;
         int valores[] = new int[qtde];
         try {
             for(i=0; i<qtde; i++){
