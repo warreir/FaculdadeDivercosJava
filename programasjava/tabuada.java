@@ -1,14 +1,12 @@
+package programasjava;
 /**
  *  @author Renan Ponick
  * 
  * 
 */
 import java.util.Scanner;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 
 public class tabuada{
     public static void main(String[] args) {
