@@ -1,4 +1,6 @@
 package Prova2;
+import java.util.ArrayList;
+import java.util.List;
 class Cliente{
     private int id;
     private String nome;
@@ -6,7 +8,7 @@ class Cliente{
     private String cpf;
     private int dias;
     private int filmesLocados;
-    private Locacao locacao;
+    List<Locacao> locacoes = new ArrayList<>();
 
     /**
      * @return the cpf
@@ -37,12 +39,6 @@ class Cliente{
      */
     public int getId() {
         return id;
-    }
-    /**
-     * @return the locacao
-     */
-    public Locacao getLocacao() {
-        return locacao;
     }
     /**
      * @return the nome
@@ -81,12 +77,6 @@ class Cliente{
         this.id = id;
     }
     /**
-     * @param locacao the locacao to set
-     */
-    public void setLocacao(Locacao locacao) {
-        this.locacao = locacao;
-    }
-    /**
      * @param nome the nome to set
      */
     public void setNome(String nome) {
@@ -107,19 +97,23 @@ class Cliente{
         System.out.println("Cpf :"+this.getCpf());
         System.out.println("Dias para devolução:"+this.getDias());
         System.out.println("Qtde Filmes Locados:"+this.getFilmesLocados());
-        if(locacao.getId()!=0){
+        if(locacoes.get(0).getId()!=0){
             System.out.println("Filmes Locados:");
-            for(Filme filme: getLocacao().filmes){
-                System.out.println(filme.getNome());
+            int aux = 0 ;
+            for(Locacao locacao: locacoes){
+                aux ++;
+                System.out.println(" ----------- Locação - "+aux+ "-------------");
+                for(Filme filme: locacao.filmes){
+                    System.out.println(filme.getNome());
+                }
+                locacao.calculaData();
+                locacao.calcularPrecoFinal();
+                System.out.println("Valor pago:");
+                System.out.println("R$: "+locacao.getValorTotal());
+                System.out.println("Data Locado:"+locacao.getDataLocacao());
+                System.out.println("Data de Devolução:"+locacao.getDataDevolucao());
             }
-            System.out.println("Valor pago:");
-            System.out.println("R$: "+ getLocacao().getValorTotal());
-            System.out.println("Data Locado:"+getLocacao().getDataLocacao());
-            System.out.println("Data de Devolução:"+getLocacao().getDataDevolucao());
+            System.out.println("Quantidade de locações realizadas foi: "+aux);
         }
-    }
-    public void fecharPedido(){
-        this.getLocacao().calculaData();
-        this.getLocacao().calcularPrecoFinal();
     }
 }

@@ -30,50 +30,52 @@ public class index{
 
         // Criando clientes
         clientes.add(new Cliente(clientes.size()+1, "Junior Rezende", "15/05/1998", "123.123.123-32", 2));
-        clientes.get(0).setLocacao(new Locacao(clientes.get(0).getId()+1, clientes.get(0)));
+        clientes.get(0).locacoes.add(new Locacao(clientes.get(0).getId()+1, clientes.get(0)));
             // Locando filme para o cliente
-            clientes.get(0).getLocacao().adicionarFilme(filmes.get(1));
-            clientes.get(0).getLocacao().adicionarFilme(filmes.get(3));
-        //Fechando pedido para poder calcular a data e o preço da locacao
-        clientes.get(0).fecharPedido();
+            clientes.get(0).locacoes.get(0).adicionarFilme(filmes.get(1));
+            clientes.get(0).locacoes.get(0).adicionarFilme(filmes.get(3));
+        clientes.get(0).locacoes.add(new Locacao(clientes.get(0).getId()+1, clientes.get(0)));
+            // Locando filme para o cliente
+            clientes.get(0).locacoes.get(1).adicionarFilme(filmes.get(8));
+            clientes.get(0).locacoes.get(1).adicionarFilme(filmes.get(9));
 
          // Criando clientes
          clientes.add(new Cliente(clientes.size()+1, "Tafarel Rezende", "12/07/1988", "143.153.123-32", 2));
-         clientes.get(1).setLocacao(new Locacao(clientes.get(1).getId()+1, clientes.get(1)));
+         clientes.get(1).locacoes.add(new Locacao(clientes.get(1).getId()+1, clientes.get(1)));
              // Locando filme para o cliente
-             clientes.get(1).getLocacao().adicionarFilme(filmes.get(5));
-             clientes.get(1).getLocacao().adicionarFilme(filmes.get(4));
-         //Fechando pedido para poder calcular a data e o preço da locacao
-         clientes.get(1).fecharPedido();
+             clientes.get(1).locacoes.get(0).adicionarFilme(filmes.get(5));
+             clientes.get(1).locacoes.get(0).adicionarFilme(filmes.get(4));
+        clientes.get(1).locacoes.add(new Locacao(clientes.get(1).getId()+1, clientes.get(1)));
+             // Locando filme para o cliente
+             clientes.get(1).locacoes.get(1).adicionarFilme(filmes.get(6));
+             clientes.get(1).locacoes.get(1).adicionarFilme(filmes.get(7));
+        clientes.get(1).locacoes.add(new Locacao(clientes.get(1).getId()+1, clientes.get(1)));
+             // Locando filme para o cliente
+             clientes.get(1).locacoes.get(2).adicionarFilme(filmes.get(8));
+             clientes.get(1).locacoes.get(2).adicionarFilme(filmes.get(9));
 
           // Criando clientes
         clientes.add(new Cliente(clientes.size()+1, "Bolivar Artagne", "15/05/1978", "123.131.123-32", 2));
-        clientes.get(2).setLocacao(new Locacao(clientes.get(2).getId()+1, clientes.get(2)));
+        clientes.get(2).locacoes.add(new Locacao(clientes.get(2).getId()+1, clientes.get(2)));
             // Locando filme para o cliente
-            clientes.get(2).getLocacao().adicionarFilme(filmes.get(3));
-            clientes.get(2).getLocacao().adicionarFilme(filmes.get(9));
-            clientes.get(2).getLocacao().adicionarFilme(filmes.get(1));
-            clientes.get(2).getLocacao().adicionarFilme(filmes.get(2));
-        //Fechando pedido para poder calcular a data e o preço da locacao
-        clientes.get(2).fecharPedido();
+            clientes.get(2).locacoes.get(0).adicionarFilme(filmes.get(3));
+            clientes.get(2).locacoes.get(0).adicionarFilme(filmes.get(9));
+            clientes.get(2).locacoes.get(0).adicionarFilme(filmes.get(1));
+            clientes.get(2).locacoes.get(0).adicionarFilme(filmes.get(2));
 
          // Criando clientes
          clientes.add(new Cliente(clientes.size()+1, "Junior Rezende", "15/05/1998", "123.123.123-32", 2));
-         clientes.get(3).setLocacao(new Locacao(clientes.get(3).getId()+1, clientes.get(3)));
+         clientes.get(3).locacoes.add(new Locacao(clientes.get(3).getId()+1, clientes.get(3)));
              // Locando filme para o cliente
-             clientes.get(3).getLocacao().adicionarFilme(filmes.get(0));
-         //Fechando pedido para poder calcular a data e o preço da locacao
-         clientes.get(3).fecharPedido();
+             clientes.get(3).locacoes.get(0).adicionarFilme(filmes.get(0));
 
           // Criando clientes
         clientes.add(new Cliente(clientes.size()+1, "Junior Rezende", "15/05/1998", "123.123.123-32", 2));
-        clientes.get(4).setLocacao(new Locacao(clientes.get(4).getId()+1, clientes.get(4)));
+        clientes.get(4).locacoes.add(new Locacao(clientes.get(4).getId()+1, clientes.get(4)));
             // Locando filme para o cliente
-            clientes.get(4).getLocacao().adicionarFilme(filmes.get(5));
-            clientes.get(4).getLocacao().adicionarFilme(filmes.get(8));
-            clientes.get(4).getLocacao().adicionarFilme(filmes.get(2));
-        //Fechando pedido para poder calcular a data e o preço da locacao
-        clientes.get(4).fecharPedido();
+            clientes.get(4).locacoes.get(0).adicionarFilme(filmes.get(5));
+            clientes.get(4).locacoes.get(0).adicionarFilme(filmes.get(8));
+            clientes.get(4).locacoes.get(0).adicionarFilme(filmes.get(2));
         
         System.out.println("O que gostaria de executar?");
         System.out.println("1 - Exibir relatórios de clientes");
