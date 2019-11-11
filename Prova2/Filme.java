@@ -10,6 +10,24 @@ class Filme{
     int estoqueAtual;
     int locado;
 
+    
+    /**
+     * @return the dataLancamento
+     */
+    public String getDataLancamento() {
+        return dataLancamento;
+    }/**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }/**
+     * @param dataLancamento the dataLancamento to set
+     */
+    public void setDataLancamento(String dataLancamento) {
+        this.dataLancamento = dataLancamento;
+    }
+
     Filme(int id, String nome, String dataLancamento, String sinopse, float valor, int estoqueTotal){
         this.id = id;
         this.nome = nome;
