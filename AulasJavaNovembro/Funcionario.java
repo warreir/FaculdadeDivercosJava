@@ -8,6 +8,7 @@ class Funcionario extends Usuario {
     private String banco;
     private Date dtAdmissao;
 
+<<<<<<< HEAD
     // -----------------------------------GET SET ----------------------------------//
         /**
          * @return the banco
@@ -81,4 +82,17 @@ class Funcionario extends Usuario {
             return id;
         }
     // ---------------------------------- FIM FUNÇÕES ------------------------------------ //
+=======
+    String nome(){
+        return banco;
+    }
+    
+    String tempoContrato(){
+        return banco;
+    }
+
+    int qtdVendas(){
+        return id;
+    }
+>>>>>>> 1d0c1bbdeac02e79376fcd5bb40774893c1da78c
 }
