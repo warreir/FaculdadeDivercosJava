@@ -2,12 +2,18 @@ package AulasJavaNovembro;
 
 import java.sql.Date;
 
-class Funcionario extends Usuario {
+class Cliente extends Usuario {
     private int id;
     private String endereco;
     private String telefone;
     private Date dtCadastro;
-
+    Cliente(int id, String userName, String psw, String nome,int idC,String endereco,String telefone,Date dtCadastro) {
+        super(id, userName, psw, nome);
+        this.id = idC;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.dtCadastro = dtCadastro;
+    }
     // ---------------------- GET SET --------------------------------//
         /**
          * @return the dtCadastro
@@ -59,7 +65,6 @@ class Funcionario extends Usuario {
         }
     // ---------------------- FIM get set --------------------------------//
     // ---------------------- Funções --------------------------------//
-    
         String tempoContrato(){
             return endereco;
         }
