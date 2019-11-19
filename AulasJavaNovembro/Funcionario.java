@@ -1,15 +1,17 @@
 package AulasJavaNovembro;
 
-
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 class Funcionario extends Usuario {
     private int id;
     private double salario;
     private String banco;
     private Date dtAdmissao;
+    private List<Venda> vendas = new ArrayList<>();
 
     // -----------------------------------GET SET ----------------------------------//
         /**
@@ -35,6 +37,18 @@ class Funcionario extends Usuario {
          */
         public double getSalario() {
             return salario;
+        }
+        /**
+         * @return the vendas
+         */
+        public List<Venda> getVendas() {
+            return vendas;
+        }
+        /**
+         * @param vendas the vendas to set
+         */
+        public void setVendas(Venda vendas) {
+            this.vendas.add(vendas);
         }
         /**
          * @param banco the banco to set
@@ -75,10 +89,15 @@ class Funcionario extends Usuario {
             return banco;
         }
         public int qtdVendas(){
-            return id;
+            return getVendas().size();
         }
         public String toString() {
             return super.toString()+"\nSalario: "+this.getSalario()+"\nBanco: "+this.getBanco()+"\nData de Admissão: "+this.getDtAdmissao();
+        }
+        public void todasVendas(){
+            for(Venda venda: vendas){
+                venda.mostrarVenda();
+            }
         }
     // ---------------------------------- FIM FUNÇÕES ------------------------------------ //
 }

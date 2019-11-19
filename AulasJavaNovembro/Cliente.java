@@ -3,12 +3,15 @@ package AulasJavaNovembro;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 class Cliente extends Usuario {
     private int id;
     private String endereco;
     private String telefone;
     private Date dtCadastro;
+    private List<Venda> vendas = new ArrayList<>();
     Cliente(int id, String userName, String psw, String nome,int idC,String endereco,String telefone,Date dtCadastro) {
         super(id, userName, psw, nome);
         this.id = idC;
@@ -42,6 +45,18 @@ class Cliente extends Usuario {
             return telefone;
         }
         /**
+         * @return the vendas
+         */
+        public List<Venda> getVendas() {
+            return vendas;
+        }
+        /**
+         * @param vendas the vendas to set
+         */
+        public void setVendas(Venda vendas) {
+            this.vendas.add(vendas);
+        }
+        /**
          * @param dtCadastro the dtCadastro to set
          */
         public void setDtCadastro(Date dtCadastro) {
@@ -70,7 +85,6 @@ class Cliente extends Usuario {
         public String tempoContrato(){
             return endereco;
         }
-
         public int qtdCompras(){
             return id;
         }
@@ -79,6 +93,11 @@ class Cliente extends Usuario {
         }
         public String toString() {
             return super.toString()+"\nEndereço: "+this.getEndereco()+"\nTelefone: "+this.getTelefone()+"\nData de Cadastro: "+this.getDtCadastro();
+        }
+        public void todasVendas(){
+            for(Venda venda: vendas){
+                venda.mostrarVenda();
+            }
         }
      // ---------------------- FIM Funções --------------------------------//
 }
