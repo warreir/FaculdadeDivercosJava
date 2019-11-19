@@ -1,6 +1,9 @@
 package AulasJavaNovembro;
 
-import java.sql.Date;
+
+import java.util.Date;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 class Funcionario extends Usuario {
     private int id;
@@ -8,7 +11,6 @@ class Funcionario extends Usuario {
     private String banco;
     private Date dtAdmissao;
 
-<<<<<<< HEAD
     // -----------------------------------GET SET ----------------------------------//
         /**
          * @return the banco
@@ -60,39 +62,23 @@ class Funcionario extends Usuario {
         }
     // ----------------------------------- FIM GET SET ----------------------------------//
     // --------------------------------- CONSTRUTOR --------------------------------------//
-        Funcionario(int id, String userName,String psw,String nome,int idF,double salario,String banco,Date dtAdmissao){
+        Funcionario(int id, String userName,String psw,String nome,int idF,double salario,String banco,Date dtAdmissao2){
             super(id,userName,psw,nome);
             this.id=idF;
             this.salario=salario;
             this.banco=banco;
-            this.dtAdmissao=dtAdmissao;
+            this.dtAdmissao=dtAdmissao2;
         }
     // --------------------------------- FIM CONSTRUTOR --------------------------------------//
     // ---------------------------------- FUNÇÕES ------------------------------------ //
-        @Override
-        public String getNome(){
-            return this.getNome();
-        }
-
         public String tempoContrato(){
             return banco;
         }
-
         public int qtdVendas(){
             return id;
         }
+        public String toString() {
+            return super.toString()+"\nSalario: "+this.getSalario()+"\nBanco: "+this.getBanco()+"\nData de Admissão: "+this.getDtAdmissao();
+        }
     // ---------------------------------- FIM FUNÇÕES ------------------------------------ //
-=======
-    String nome(){
-        return banco;
-    }
-    
-    String tempoContrato(){
-        return banco;
-    }
-
-    int qtdVendas(){
-        return id;
-    }
->>>>>>> 1d0c1bbdeac02e79376fcd5bb40774893c1da78c
 }

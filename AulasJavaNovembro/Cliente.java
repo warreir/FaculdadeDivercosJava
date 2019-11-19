@@ -1,6 +1,8 @@
 package AulasJavaNovembro;
 
-import java.sql.Date;
+import java.util.Date;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 class Cliente extends Usuario {
     private int id;
@@ -65,15 +67,18 @@ class Cliente extends Usuario {
         }
     // ---------------------- FIM get set --------------------------------//
     // ---------------------- Funções --------------------------------//
-        String tempoContrato(){
+        public String tempoContrato(){
             return endereco;
         }
 
-        int qtdCompras(){
+        public int qtdCompras(){
             return id;
         }
-        double valorCompras(){
+        public double valorCompras(){
             return id;
+        }
+        public String toString() {
+            return super.toString()+"\nEndereço: "+this.getEndereco()+"\nTelefone: "+this.getTelefone()+"\nData de Cadastro: "+this.getDtCadastro();
         }
      // ---------------------- FIM Funções --------------------------------//
 }
