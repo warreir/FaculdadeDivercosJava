@@ -29,9 +29,9 @@ public class index{
                 
                 switch(op){
                     case 1:{
-                        System.out.println("0 - Venda \n1 - Cadastrar Cliente \n2 - Cadastrar Funcionario \n3 - Cadastrar Produto\n9 - Sair");
+                        System.out.println("1 - Cadastrar Cliente \n2 - Cadastrar Funcionario \n3 - Cadastrar Produto\n4 - Venda \n9 - Sair");
                         op = scanner.nextInt();
-                        if(op ==3){
+                        if(op == 3){
                             System.out.println("Informe o Nome: ");
                             String nomeProduto = scanner.next();
 
@@ -87,6 +87,28 @@ public class index{
                                     break;
                                 }
                             }
+                        }else if(op==4){
+                            
+                            System.out.println("Informe o id do produto: ");
+                            int idProduto = scanner.nextInt();
+                            idProduto--;
+
+                            Date dataVenda = c.getTime();
+
+                            System.out.println("Informe a quantidade do produto "+produtos.get(idProduto).getNome());
+                            int qtdeProduto = scanner.nextInt();
+
+                            System.out.println("Informe o id do Cliente");
+                            int idCliente = scanner.nextInt();
+                            idCliente--;
+
+                            System.out.println("Informe o id do Funcionário");
+                            int idFuncionario = scanner.nextInt();
+                            idFuncionario--;
+
+                            int idVenda = (funcionarios.get(idFuncionario).getVendas().size()+1);
+
+                            Venda venda = new Venda(idVenda, dataVenda, funcionarios.get(idFuncionario), clientes.get(idCliente));
                         }else{
                             System.out.println("Digitou errado");
                         }
@@ -122,6 +144,7 @@ public class index{
                                 id--;
                                 try{
                                    System.out.println(funcionarios.get(id).toString());
+                                   funcionarios.get(id).todasVendas();
                                 } catch (Exception e) {
                                    System.out.println("Id desconhecido"+e);
                                 }
@@ -134,6 +157,7 @@ public class index{
                                 id--;
                                 try {
                                     System.out.println(clientes.get(id).toString());
+                                    clientes.get(id).todasVendas();
                                  } catch (Exception e) {
                                     System.out.println("Id desconhecido"+e);
                                  }
