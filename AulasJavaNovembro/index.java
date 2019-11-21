@@ -92,9 +92,7 @@ public class index{
                             System.out.println("Informe o id do produto: ");
                             int idProduto = scanner.nextInt();
                             idProduto--;
-
-                            Date dataVenda = c.getTime();
-
+                            
                             System.out.println("Informe a quantidade do produto "+produtos.get(idProduto).getNome());
                             int qtdeProduto = scanner.nextInt();
 
@@ -108,7 +106,9 @@ public class index{
 
                             int idVenda = (funcionarios.get(idFuncionario).getVendas().size()+1);
 
-                            Venda venda = new Venda(idVenda, dataVenda, funcionarios.get(idFuncionario), clientes.get(idCliente));
+                            Date dataVenda = c.getTime();
+
+                            Venda venda = new Venda(idVenda/*, dataVenda*/, funcionarios.get(idFuncionario), clientes.get(idCliente));
                         }else{
                             System.out.println("Digitou errado");
                         }
