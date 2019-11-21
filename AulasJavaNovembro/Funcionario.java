@@ -76,12 +76,12 @@ class Funcionario extends Usuario {
         }
     // ----------------------------------- FIM GET SET ----------------------------------//
     // --------------------------------- CONSTRUTOR --------------------------------------//
-        Funcionario(int id, String userName,String psw,String nome,int idF,double salario,String banco,Date dtAdmissao2){
+        Funcionario(int id, String userName,String psw,String nome,int idF,double salario,String banco,Date dtAdmissao){
             super(id,userName,psw,nome);
             this.id=idF;
             this.salario=salario;
             this.banco=banco;
-            this.dtAdmissao=dtAdmissao2;
+            this.dtAdmissao=dtAdmissao;
         }
     // --------------------------------- FIM CONSTRUTOR --------------------------------------//
     // ---------------------------------- FUNÇÕES ------------------------------------ //

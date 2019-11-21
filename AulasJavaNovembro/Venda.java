@@ -1,6 +1,8 @@
 package AulasJavaNovembro;
 
 import java.sql.Date;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +14,9 @@ class Venda {
     private List<VendaProduto> vendasProdutos = new ArrayList<>();
     private double valorTotal;
     // ------------- Construtor --------------//
-        Venda(int id, Date dataVenda, Funcionario funcionario, Cliente cliente){
+        Venda(int id /*,Date dataVenda*/, Funcionario funcionario, Cliente cliente){
             this.id = id;
-            this.dataVenda = dataVenda;
+            //this.dataVenda = dataVenda;
             this.funcionario = funcionario;
             this.cliente = cliente;
             this.funcionario.getVendas().add(this);
