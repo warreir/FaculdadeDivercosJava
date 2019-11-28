@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class indexTest{
     public static void main(String[] args) throws SQLException{
-        final String url = "jdbc:mysql://localhost:3306/test";
+        final String url = "jdbc:mysql://localhost:3306/bancojackson";
         final String user = "root";
         final String password = "";
 
